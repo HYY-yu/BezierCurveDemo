@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.app.feng.beziercurvedemo.Activity.MainActivity">
+
+    <com.app.feng.beziercurvedemo.View.BezierPainter
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/view"
+        />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="开始点"
+                android:id="@+id/start"
+                android:layout_weight="1"
+                android:onClick="switchPoint"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="控制点1"
+                android:id="@+id/con1"
+                android:onClick="switchPoint"
+                android:layout_weight="1"
+                android:checked="true"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="控制点2"
+                android:id="@+id/con2"
+                android:onClick="switchPoint"
+                android:layout_weight="1"
+                android:checked="false"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="结束点"
+                android:id="@+id/end"
+                android:layout_weight="1"
+                android:onClick="switchPoint"/>
+
+        </RadioGroup>
+
+</RelativeLayout>
